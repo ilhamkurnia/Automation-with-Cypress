@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress": "cypress open",
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@applitools/eyes-cypress": "^3.34.1"
+  },
+  "devDependencies": {
+    "@applitools/eyes.cypress": "^3.4.11",
     "cypress": "^12.17.1"
   }
 }
