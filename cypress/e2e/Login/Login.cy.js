@@ -20,22 +20,8 @@ describe('feature Login', () => {
         loginPage.validateUsername('Required')
     })
 
+    
     it('Valid Username & Password', () => {
-
-        loginPage.InputUsername('Admin')
-
-        utils.wait()
-
-        loginPage.InputPassword('admin123')
-
-        utils.wait()
-
-        loginPage.buttonLogin()
-
-        utils.wait()
-
-        loginPage.validateAfterLogin('Dashboard')
+        loginPage.login()
     })
-
-
 })

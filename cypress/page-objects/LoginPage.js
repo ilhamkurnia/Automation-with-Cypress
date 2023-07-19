@@ -1,4 +1,6 @@
+
 export class LoginPage {
+    
     navigate () {
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     }
@@ -27,4 +29,15 @@ export class LoginPage {
     validateAfterLogin(expectedText){
         cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('have.text', expectedText)
     }
+
+    login() {
+        this.InputUsername('Admin')
+
+        this.InputPassword('admin123')
+
+        this.buttonLogin()
+        this.validateAfterLogin('Dashboard')
+    }
+
+    
 }
